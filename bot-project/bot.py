@@ -1,8 +1,9 @@
+#!/usr/bin/python3
 import config
 import telebot
 
 # Создаем экземпляр бота
-bot = telebot.TeleBot(config.token)
+bot = telebot.TeleBot(os.getenv("TELEGRAM_API_TOKEN"))
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
