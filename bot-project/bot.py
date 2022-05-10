@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 #! /usr/bin/python3
+=======
+#!/usr/bin/python3
+>>>>>>> 5c366e3ea3179c59971767d1a94cfcd429f13803
 import config
 import telebot
 
 # Создаем экземпляр бота
-bot = telebot.TeleBot(config.token)
+bot = telebot.TeleBot(os.getenv("TELEGRAM_API_TOKEN"))
 # Функция, обрабатывающая команду /start
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
